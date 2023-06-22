@@ -51,7 +51,7 @@ class Program
         Console.WriteLine("POdaj rok do sprawdzenia");
         int year = Int32.Parse(Console.ReadLine());
 
-        if((year % 4 == 0) && (year % 400 == 0 || year % 100 != 0)) 
+        if((year % 4 == 0 && year % 100 != 0 ) || year % 400 == 0 )
         {
             Console.WriteLine($"Rok {year} jest przestępny");
         }
@@ -225,7 +225,7 @@ class Program
                 Console.WriteLine("Celujący");
                 break;
             default:
-                Console.WriteLine("Niema takiej oceny");
+                Console.WriteLine("Nie ma takiej oceny");
                 break;
         }
 
@@ -257,7 +257,7 @@ class Program
                 Console.WriteLine("Niedziela");
                 break;
             default:
-                Console.WriteLine("Niema takiego dnia");
+                Console.WriteLine("Nie ma takiego dnia");
                 break;
         }
 
